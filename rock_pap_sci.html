@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ready to Play !</h2>
+    <button onclick="play('rock')">rock</button>
+    <button onclick="play('paper')">paper</button>
+    <button onclick="play('scissor')">scissor</button>
+    <br>
+    <p id="computer"></p>
+    <h2 id="result"></h2>
+
+    <script>
+        function play(ch)
+        {
+            const choices=['rock','paper','scissor'];
+            const me=choices[Math.floor(Math.random()*3)];
+            document.getElementById('computer').textContent=`ME : ${me}`;
+            let res="";
+            if(ch==me)
+                res="draw";
+            else if((ch=='rock'&& me=='paper')||(ch=='paper'&& me=='scissor')||(ch=='scissor'&&me=='rock'))
+                res="I Won";
+            else    
+                res="You Won!!!"
+            document.getElementById("result").textContent=res;
+        }
+    </script>
+</body>
+</html>
