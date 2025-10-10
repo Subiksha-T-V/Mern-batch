@@ -1,0 +1,12 @@
+.nav{
+    display:flex;
+    justify-content: space-between;
+    background-color: deeppink;
+}
+.nav ul{
+    display: flex;
+    list-style-type: none; 
+}
+.nav li{
+    padding: 20px;
+}
